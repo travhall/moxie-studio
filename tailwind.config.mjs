@@ -1,8 +1,59 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {},
-	},
-	plugins: [],
-}
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
+    extend: {
+      colors: {
+        "ivory-rose": {
+          50: "#FCF9F9",
+          100: "#F4EBEB",
+          200: "#EFE2E2",
+          300: "#E8D4D4",
+          400: "#E4CCCC",
+          500: "#DDBFBF",
+          600: "#C9AEAE",
+          700: "#9D8888",
+          800: "#7A6969",
+          900: "#5D5050",
+        },
+        monstera: {
+          50: "#E8ECE9",
+          100: "#B9C3BA",
+          200: "#97A699",
+          300: "#687E6B",
+          400: "#4A654E",
+          500: "#1D3E22",
+          600: "#1A381F",
+          700: "#152C18",
+          800: "#102213",
+          900: "#0C1A0E",
+        },
+        "rose-gold": {
+          50: "#FBF8F2",
+          100: "#F3E9D6",
+          200: "#EEDEC2",
+          300: "#E6CFA7",
+          400: "#E1C595",
+          500: "#D9B77B",
+          600: "#C5A770",
+          700: "#9A8257",
+          800: "#776544",
+          900: "#5B4D34",
+        },
+        midnite: {
+          50: "#E7E8E7",
+          100: "#B4B8B5",
+          200: "#909691",
+          300: "#5E665E",
+          400: "#3E493F",
+          500: "#0E1B0F",
+          600: "#0D190E",
+          700: "#0A130B",
+          800: "#080F08",
+          900: "#060B06",
+        },
+      },
+    },
+  },
+  plugins: [],
+};
