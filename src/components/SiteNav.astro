@@ -15,9 +15,20 @@ const navData = [
     href: "about",
   },
 ];
+
+const topLink = {
+  title: "Back to top",
+  href: "top",
+};
 ---
 
-<span class="logo-container inline-block p-4 lg:fixed z-40 nav-link">
+<span class="absolute h-0 w-0 top-0" id="top"></span>
+<a
+  href="#"
+  data-block={topLink.href}
+  aria-label={topLink.title}
+  class="logo-container inline-block p-4 lg:fixed z-40"
+>
   <!-- large logo  -->
   <svg
     width="180"
@@ -50,12 +61,12 @@ const navData = [
       fill=""
       class="logo-fill"></path></svg
   >
-</span>
+</a>
 
 <nav
   class="fixed lg:sticky flex flex-col sm:flex-row md:inline-flex items-center gap-4 py-4 px-6 lg:mt-[18dvh] bottom-4 lg:top-4 lg:bottom-auto left-1/2 lg:left-56 2xl:left-[20vw] bg-ivory-rose-100/80 dark:bg-monstera-800/80 backdrop-blur text-midnite-900 dark:text-white -translate-x-2/4 lg:translate-x-[none] rounded-2xl z-30"
 >
-  <ul class="flex flex-row flex-shrink">
+  <ul class="flex flex-row">
     {
       navData.map((i) => (
         <li>
@@ -75,7 +86,7 @@ const navData = [
 </nav>
 
 <script type="module">
-  function handleClickLink(event) {
+  function navLinkClick(event) {
     event.preventDefault();
     const block = event.target.dataset.block;
     console.log(block);
@@ -83,6 +94,6 @@ const navData = [
   }
 
   document.querySelectorAll(".nav-link").forEach((elem) => {
-    elem.addEventListener("click", handleClickLink);
+    elem.addEventListener("click", navLinkClick);
   });
 </script>
