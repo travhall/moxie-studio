@@ -15,21 +15,9 @@ const navData = [
     href: "about",
   },
 ];
-
-const topLink = {
-  title: "Back to top",
-  href: "top",
-};
 ---
 
-<span class="absolute h-0 w-0 top-0" id="top"></span>
-<a
-  href="#"
-  onclick="preventDefault()"
-  data-block={topLink.href}
-  aria-label={topLink.title}
-  class="logo-container inline-block p-4 lg:fixed z-40"
->
+<a href="#" class="logo-container inline-block p-4 lg:fixed z-40">
   <!-- large logo  -->
   <svg
     width="180"
@@ -97,4 +85,11 @@ const topLink = {
   document.querySelectorAll(".nav-link").forEach((elem) => {
     elem.addEventListener("click", navLinkClick);
   });
+
+  document
+    .querySelector(".logo-container")
+    .addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.scrollIntoView({ behavior: "smooth" });
+    });
 </script>
