@@ -17,6 +17,16 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/moxie-studio/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link
+      rel="preload"
+      href="/moxie-studio/fonts/Mulish-VariableFont_wght.ttf"
+      as="font"
+    />
+    <link
+      rel="preload"
+      href="/moxie-studio/fonts/Mulish-Italic-VariableFont_wght.ttf"
+      as="font"
+    />
     <title>{title}</title>
   </head>
   <body
@@ -33,16 +43,16 @@ const { title } = Astro.props;
         font-style: normal;
         font-weight: 200 1000;
         font-display: swap;
-        src: url(/moxie-studio/fonts/Mulish-VariableFont_wght.ttf)
-          format("truetype");
+        src: url(/moxie-studio/fonts/Mulish-VariableFont_wght.woff2)
+          format("woff2");
       }
       @font-face {
         font-family: "Mulish Italic";
         font-style: normal;
         font-weight: 200 1000;
         font-display: swap;
-        src: url(/moxie-studio/fonts/Mulish-Italic-VariableFont_wght.ttf)
-          format("truetype");
+        src: url(/moxie-studio/fonts/Mulish-Italic-VariableFont_wght.woff2)
+          format("woff2");
       }
       @font-face {
         font-family: "Nyght Serif";
