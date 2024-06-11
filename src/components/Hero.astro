@@ -1,7 +1,15 @@
 ---
 import Button from "./Button.astro";
+import { Image } from "astro:assets";
+
+import heroImg from "../assets/hero-img.jpg";
 ---
 
+<!-- <Image
+  src={heroImg}
+  alt="Close up image of a woman's face. She has amazing lashes."
+  class="absolute top-0 right-0 rounded-bl-[48%] border-l-8 border-rose-gold-500 object-cover h-dvh max-h-[640px] max-w-1/2 md:w-3/4 lg:max-w-screen-sm z-0"
+/> -->
 <section class="hero relative w-full min-h-dvh" id="hero">
   <div
     class="content relative max-w-[65ch] sm:left-[10vw] md:left-28 lg:left-56 2xl:left-[20vw] p-8 lg:px-2"
