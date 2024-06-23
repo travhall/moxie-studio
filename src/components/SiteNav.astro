@@ -20,7 +20,7 @@ const navData = [
 <a
   href="#"
   aria-label="Back to top"
-  class="logo-container inline-block p-8 pb-0 lg:p-4 mt-[25dvh] md:mt-0 relative lg:fixed z-40"
+  class="logo-container inline-block p-8 pb-0 lg:p-4 mt-56 md:mt-0 relative lg:fixed z-40"
 >
   <!-- large logo  -->
   <svg
@@ -57,7 +57,7 @@ const navData = [
 </a>
 
 <nav
-  class="fixed lg:sticky flex flex-col sm:flex-row sm:inline-flex items-center gap-2 py-2 px-4 lg:mt-[18dvh] lg:top-4 bottom-2 lg:bottom-auto left-2 sm:left-[auto] lg:left-56 2xl:left-[20vw] right-2 sm:right-[auto] bg-ivory-rose-100/80 dark:bg-monstera-800/80 backdrop-blur text-midnite-900 dark:text-white rounded-2xl z-30"
+  class="fixed lg:sticky flex flex-col sm:flex-row sm:inline-flex items-center gap-2 py-2 px-4 lg:mt-[18dvh] md:top-6 bottom-2 md:bottom-auto left-2 sm:left-[auto] lg:left-56 2xl:left-[20vw] right-2 sm:right-[auto] bg-ivory-rose-100/80 dark:bg-monstera-800/80 backdrop-blur text-midnite-900 dark:text-white rounded-2xl z-30"
 >
   <ul class="flex flex-row justify-between w-full ps-4 pe-4 md:p-0">
     {
@@ -67,7 +67,7 @@ const navData = [
             href="#"
             data-block={i.href}
             aria-label={i.title}
-            class="p-4 text-center nav-link"
+            class="p-4 text-center font-semibold hover:bg-ivory-rose-200/80 dark:hover:bg-monstera-700/80 rounded-2xl transition-all ease-in-out duration-700 nav-link"
           >
             {i.title}
           </a>
