@@ -37,21 +37,23 @@ import placeholder from "../assets/placeholder.png";
       class="relative grid place-content-center w-full min-h-lvh"
       id="about"
     >
-      <div class="about-container p-4 flex flex-col md:flex-row justify-center">
+      <div
+        class="about-container p-4 my-60 flex flex-col md:flex-row justify-center"
+      >
         <Image
           src={profileImage}
           alt="Jackie Schult, owner and operator of Moxie Beauty Studio"
           class="h-96 w-64 mb-8 mr-8 md:mr-8 lg:mr-10 rounded-tl rounded-tr-[4rem] rounded-br rounded-bl-[4rem] border-r-[.5rem] border-rose-gold-500 dark:border-ivory-rose-500 object-cover z-0"
         />
-        <div class="about-content p-4 text-balance">
-          <h2 class="font-display text-3xl lg:text-4xl mb-8 max-w-[20ch]">
+        <div class="about-content p-4 text-pretty">
+          <h2 class="font-display text-3xl lg:text-4xl mb-8 max-w-[16ch]">
             Discover the Heart & Soul of Moxie
           </h2>
-          <p class="text-xl mb-4">
+          <p class="text-xl mb-4 max-w-[36ch]">
             Moxie Beauty Studio is dedicated to helping clients feel beautiful
             and confident.
           </p>
-          <p class="text-base mb-4">
+          <p class="text-base mb-4 max-w-[56ch]">
             Moxie Beauty Studio is owned and operated by Jackie Schult. Jackie
             specializes in eyelash extensions, lash lift and tint, eyebrow
             lamination, microblading, and waxing. Jackie's dedication to
@@ -64,20 +66,14 @@ import placeholder from "../assets/placeholder.png";
           <Image
             src={placeholder}
             alt="Image of the interior of Moxie Beauty Studio"
-            class="h-96 max-w-1/2 mb-8 mr-8 md:mr-8 lg:mr-10 rounded-tl rounded-tr-[4rem] rounded-br rounded-bl-[4rem] border-r-[.5rem] border-rose-gold-500 dark:border-ivory-rose-500 object-cover z-0"
+            class="h-96 w-full max-w-[40rem] mb-8 mr-8 md:mr-8 lg:mr-10 rounded-tl rounded-tr-[4rem] rounded-br rounded-bl-[4rem] border-r-[.5rem] border-rose-gold-500 dark:border-ivory-rose-500 object-cover z-0"
           />
-          <p class="text-lg mb-4">
+          <p class="text-lg mb-4 max-w-[56ch]">
             Moxie Beauty Studio is more than just a place for beauty treatments;
             it's a welcoming space where clients can embark on their self-care
             journey with the support and expertise needed to achieve their best
             selves.
           </p>
-
-          <Image
-            src={placeholder}
-            alt="Image of the interior of Moxie Beauty Studio"
-            class="h-96 max-w-1/2 mb-8 mr-8 md:mr-8 lg:mr-10 rounded-tl rounded-tr-[4rem] rounded-br rounded-bl-[4rem] border-r-[.5rem] border-rose-gold-500 dark:border-ivory-rose-500 object-cover z-0"
-          />
         </div>
       </div>
     </section>
