@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
+
+interface Image {
+  src: string;
+  alt: string;
+  cols?: number; // Optional property to specify column span
+  rows?: number; // Optional property to specify row span
+}
+
+const images: Image[] = [
+  {
+    src: "/src/assets/placeholder.png",
+    alt: "Placeholder Image 1",
+    cols: 2,
+    rows: 2,
+  },
+  {
+    src: "/src/assets/placeholder.png",
+    alt: "Placeholder Image 2",
+  },
+  { src: "/src/assets/placeholder.png", alt: "Placeholder Image 3" },
+  {
+    src: "/src/assets/placeholder.png",
+    alt: "Placeholder Image 4",
+    cols: 2,
+    rows: 2,
+  },
+  {
+    src: "/src/assets/placeholder.png",
+    alt: "Placeholder Image 5",
+    cols: 2,
+  },
+  { src: "/src/assets/placeholder.png", alt: "Placeholder Image 6" },
+  { src: "/src/assets/placeholder.png", alt: "Placeholder Image 7" },
+  { src: "/src/assets/placeholder.png", alt: "Placeholder Image 8" },
+  { src: "/src/assets/placeholder.png", alt: "Placeholder Image 9" },
+];
+---
+
+<section
+  class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-1"
+>
+  {
+    images.map((image, index) => (
+      <div
+        data-index={index}
+        class={`col-span-${image.cols || "auto"} row-span-${image.rows || "auto"}`}
+      >
+        <img
+          src={image.src}
+          alt={image.alt}
+          class="h-full w-full rounded-lg object-cover"
+          loading="lazy"
+        />
+        <!-- <Image src={image.src} alt={image.alt} /> -->
+      </div>
+    ))
+  }
+</section>
