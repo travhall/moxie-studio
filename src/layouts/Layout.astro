@@ -2,6 +2,7 @@
 import SiteNav from "../components/SiteNav.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { SEOMetadata } from "astro-seo-metadata";
+import { Icon } from "astro-icon/components";
 
 interface Props {
   title: string;
@@ -39,6 +40,10 @@ const { title } = Astro.props;
     id="top"
   >
     <SiteNav />
+    <!-- <Icon
+      name="Foliage/Foliage-01"
+      class="absolute -top-4 w-auto h-[80vw] md:h-[60vw] xl:h-[40vw] rotate-45 opacity-25"
+    /> -->
     <slot />
     <SiteFooter />
 
