@@ -107,7 +107,10 @@ const { title } = Astro.props;
         fill: #fff;
       }
       .logo-fill {
-        fill: #1d3e22;
+        fill: #0c1a0e;
+      }
+      .logo-hilite {
+        fill: #d9b77b;
       }
       @media (prefers-color-scheme: dark) {
         button path {
@@ -116,12 +119,42 @@ const { title } = Astro.props;
         .logo-fill {
           fill: #fff;
         }
+        .logo-hilite {
+          fill: #ddbfbf;
+        }
+        .light {
+          button path {
+            fill: #fff;
+          }
+          .logo-fill {
+            fill: #0c1a0e;
+          }
+          .logo-hilite {
+            fill: #d9b77b;
+          }
+        }
       }
-      .dark button path {
-        fill: #0c1a0e;
-      }
-      .dark .logo-fill {
-        fill: #fff;
+      @media (prefers-color-scheme: light) {
+        button path {
+          fill: #fff;
+        }
+        .logo-fill {
+          fill: #0c1a0e;
+        }
+        .logo-hilite {
+          fill: #d9b77b;
+        }
+        .dark {
+          button path {
+            fill: #0c1a0e;
+          }
+          .logo-fill {
+            fill: #fff;
+          }
+          .logo-hilite {
+            fill: #ddbfbf;
+          }
+        }
       }
     </style>
     <script>
