@@ -1,4 +1,5 @@
 ---
+import Image from "astro/components/Image.astro";
 interface Image {
   src: string;
   alt: string;
@@ -19,7 +20,7 @@ const images: Image[] = [
   },
   { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder 3" },
   {
-    src: "/moxie-studio/images/placeholder.png",
+    src: "/moxie-studio/images/placeholder-tall.png",
     alt: "Placeholder 4",
     cols: 2,
     rows: 2,
@@ -77,13 +78,15 @@ const images: Image[] = [
         data-index={index}
         class={`col-span-${image.cols || "auto"} row-span-${image.rows || "auto"}`}
       >
-        <img
+        <Image
           src={image.src}
           alt={image.alt}
           class="h-full w-full rounded-lg object-cover cursor-pointer"
           loading="lazy"
           data-src={image.src}
           data-alt={image.alt}
+          height="100"
+          width="100"
         />
       </div>
     ))
