@@ -36,6 +36,38 @@ const images: Image[] = [
 ];
 ---
 
+<style>
+  /* Styles for modal and overlay */
+  #modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75); /* semi-transparent black */
+    opacity: 0; /* start hidden */
+    visibility: hidden; /* start hidden */
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 1000;
+  }
+
+  #modal.open {
+    opacity: 1; /* fade in */
+    visibility: visible; /* show */
+  }
+
+  #modalImage {
+    max-width: 90vw; /* adjust maximum width as needed */
+    max-height: 90vh; /* adjust maximum height as needed */
+    border-radius: 8px;
+  }
+</style>
+
 <section
   class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-1"
 >
@@ -48,10 +80,51 @@ const images: Image[] = [
         <img
           src={image.src}
           alt={image.alt}
-          class="h-full w-full rounded-lg object-cover"
+          class="h-full w-full rounded-lg object-cover cursor-pointer"
           loading="lazy"
+          data-src={image.src}
+          data-alt={image.alt}
         />
       </div>
     ))
   }
 </section>
+
+<div id="modal">
+  <div class="relative">
+    <img
+      id="modalImage"
+      src=""
+      alt=""
+      class="max-h-full max-w-full rounded-lg"
+    />
+    <button id="closeButton" class="absolute top-2 right-2 text-white text-2xl"
+      >&times;</button
+    >
+  </div>
+</div>
+
+<script type="module">
+  document.querySelectorAll("img[data-src]").forEach((img) => {
+    img.addEventListener("click", () => {
+      openModal(img.getAttribute("data-src"), img.getAttribute("data-alt"));
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    });
+  });
+
+  document.getElementById("closeButton").addEventListener("click", closeModal);
+
+  function openModal(src, alt) {
+    const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modalImage");
+    modalImage.src = src || "";
+    modalImage.alt = alt || "";
+    modal.classList.add("open");
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.classList.remove("open");
+    document.body.style.overflow = ""; // Enable scrolling
+  }
+</script>
