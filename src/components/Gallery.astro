@@ -9,30 +9,30 @@ interface Image {
 const images: Image[] = [
   {
     src: "/moxie-studio/images/placeholder.png",
-    alt: "Placeholder Image 1",
+    alt: "Placeholder 1",
     cols: 2,
     rows: 2,
   },
   {
     src: "/moxie-studio/images/placeholder.png",
-    alt: "Placeholder Image 2",
+    alt: "Placeholder 2",
   },
-  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder Image 3" },
+  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder 3" },
   {
     src: "/moxie-studio/images/placeholder.png",
-    alt: "Placeholder Image 4",
+    alt: "Placeholder 4",
     cols: 2,
     rows: 2,
   },
   {
     src: "/moxie-studio/images/placeholder.png",
-    alt: "Placeholder Image 5",
+    alt: "Placeholder 5",
     cols: 2,
   },
-  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder Image 6" },
-  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder Image 7" },
-  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder Image 8" },
-  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder Image 9" },
+  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder 6" },
+  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder 7" },
+  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder 8" },
+  { src: "/moxie-studio/images/placeholder.png", alt: "Placeholder 9" },
 ];
 ---
 
@@ -98,9 +98,14 @@ const images: Image[] = [
       alt=""
       class="max-h-full max-w-full rounded-lg"
     />
-    <button id="closeButton" class="absolute top-2 right-2 text-white text-2xl"
-      >&times;</button
+    <button
+      id="closeButton"
+      class="absolute flex place-content-center top-2 right-2 border-2 border-monstera-500 bg-ivory-rose-50/85 outline-0 ring-offset-2 ring-offset-ivory-rose-50 focus-visible:ring focus-visible:ring-monstera-500 backdrop-blur h-8 w-8 rounded-full"
     >
+      <span class="leading-none text-monstera-500 text-2xl -mt-[2px]"
+        >&times;</span
+      >
+    </button>
   </div>
 </div>
 

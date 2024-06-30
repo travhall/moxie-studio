@@ -18,7 +18,7 @@ const navData = [
 ---
 
 <a
-  href="#"
+  href="#0"
   aria-label="Back to top"
   class="logo-container inline-block p-8 pb-0 lg:p-4 mt-56 md:mt-0 relative lg:fixed z-40"
 >
@@ -64,10 +64,10 @@ const navData = [
       navData.map((i) => (
         <li>
           <a
-            href="#"
+            href="#0"
             data-block={i.href}
             aria-label={i.title}
-            class="block p-2 lg:p-4 text-center font-semibold lg:hover:bg-ivory-rose-300/80 lg:dark:hover:bg-monstera-700/80 rounded-2xl transition-all ease-in-out duration-700 nav-link"
+            class="block p-2 lg:p-4 text-center font-semibold lg:hover:bg-ivory-rose-300/80 lg:dark:hover:bg-monstera-700/80 outline-0 focus-visible:ring focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500 rounded-2xl transition-all ease-in-out duration-700 nav-link"
           >
             {i.title}
           </a>

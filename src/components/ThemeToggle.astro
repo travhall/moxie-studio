@@ -4,31 +4,29 @@ import { ThemeSwitch } from "astro-color-scheme";
 ---
 
 <ThemeSwitch strategy="checkbox">
-  <div class="flex items-center w-full mb-0">
-    <label for="toggleB" class="flex items-center cursor-pointer">
-      <!-- toggle -->
-      <div class="relative">
-        <!-- input -->
-        <input type="checkbox" id="toggleB" class="sr-only" />
-        <!-- line -->
-        <div
-          class="block bg-monstera-500 dark:bg-ivory-rose-500 w-14 h-8 rounded-full"
-        >
-        </div>
-        <!-- dot -->
-        <div
-          class="dot absolute left-1 top-1 bg-white dark:bg-monstera-900 w-6 h-6 rounded-full transition"
-        >
-          <Icon class="block dark:hidden h-6 w-6" name="Sun" />
-          <Icon class="hidden dark:block h-6 w-6" name="Moon" />
-        </div>
+  <label for="toggleB" class="flex items-center cursor-pointer">
+    <!-- toggle -->
+    <div class="relative">
+      <!-- input -->
+      <input type="checkbox" id="toggleB" class="sr-only" />
+      <!-- line -->
+      <div
+        class="block bg-monstera-500 dark:bg-ivory-rose-500 w-14 h-8 rounded-full"
+      >
       </div>
-      <!-- label -->
-      <div class="ml-1">
-        <span class="sr-only">Toggle Theme</span>
+      <!-- dot -->
+      <div
+        class="dot absolute left-1 top-1 bg-white dark:bg-monstera-900 w-6 h-6 rounded-full transition"
+      >
+        <Icon class="block dark:hidden h-6 w-6" name="Sun" />
+        <Icon class="hidden dark:block h-6 w-6" name="Moon" />
       </div>
-    </label>
-  </div>
+    </div>
+    <!-- label -->
+    <div class="ml-1">
+      <span class="sr-only">Toggle Theme</span>
+    </div>
+  </label>
 </ThemeSwitch>
 
 <style>
