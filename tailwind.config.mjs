@@ -73,6 +73,7 @@ export default {
         },
       },
       fontFamily: {
+        sans: ["Mulish", "sans-serif"],
         display: [
           "Nyght Serif",
           "Georgia",
