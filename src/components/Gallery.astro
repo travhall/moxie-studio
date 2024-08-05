@@ -37,39 +37,7 @@ const images: Image[] = [
 ];
 ---
 
-<style>
-  /* Styles for modal and overlay */
-  #modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.75); /* semi-transparent black */
-    opacity: 0; /* start hidden */
-    visibility: hidden; /* start hidden */
-    transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease;
-    z-index: 1000;
-  }
-
-  #modal.open {
-    opacity: 1; /* fade in */
-    visibility: visible; /* show */
-  }
-
-  #modalImage {
-    max-width: 90vw; /* adjust maximum width as needed */
-    max-height: 90vh; /* adjust maximum height as needed */
-    border-radius: 8px;
-  }
-</style>
-
-<section
+<div
   class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-1"
 >
   {
@@ -92,7 +60,7 @@ const images: Image[] = [
       </div>
     ))
   }
-</section>
+</div>
 
 <div id="modal" class="modal-window">
   <div class="modal-container relative">
@@ -112,6 +80,37 @@ const images: Image[] = [
     </button>
   </div>
 </div>
+
+<style>
+  #modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 1000;
+  }
+
+  #modal.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #modalImage {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+</style>
 
 <script type="module">
   document.querySelectorAll("img[data-src]").forEach((img) => {

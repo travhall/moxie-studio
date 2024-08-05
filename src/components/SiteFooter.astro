@@ -70,10 +70,14 @@ const currentYear = new Date().getFullYear();
         >(262) 332-6072</a
       >
     </div>
-    <div class="flex flex-row gap-3 items-end justify-between mt-8 md:mt-0">
-      <Button size="sm">
-        <span class="lg:hidden xl:block">Moxie's Facebook</span>
+    <div class="flex flex-row gap-2 items-end justify-between mt-8 md:mt-0">
+      <Button size="sm" classes="py-2.5 facebook-btn">
+        <span class="sr-only">Moxie's Facebook</span>
         <Icon class="h-3 w-3" name="Facebook" />
+      </Button>
+      <Button size="sm" classes="py-2.5 instagram-btn">
+        <span class="sr-only">Moxie's Instagram</span>
+        <Icon class="h-3 w-3" name="Instagram" />
       </Button>
       <ThemeToggle />
     </div>
