@@ -1,0 +1,338 @@
+---
+import { Image } from "astro:assets";
+import serviceImage from "../assets/services-img.jpg";
+import placeholder from "../assets/placeholder.jpg";
+---
+
+<div class="services-container flex flex-col md:flex-row justify-center">
+  <Image
+    src={serviceImage}
+    alt="Close up of a woman receiving lash treatment."
+    class="h-96 w-full md:w-1/2 mb-8 mr-8 md:mr-8 lg:mr-10 rounded-tl rounded-tr-[4rem] rounded-br rounded-bl-[4rem] border-r-[.5rem] border-b-[.5rem] border-rose-gold-500 dark:border-ivory-rose-500 object-cover z-0"
+    loading="lazy"
+    format="avif"
+  />
+  <div class="services-content p-4 text-pretty">
+    <h2 class="font-display text-3xl lg:text-4xl mb-8 max-w-[16ch]">
+      The Magic of Moxie
+    </h2>
+    <p class="text-xl mb-4 max-w-[56ch] text-balance">
+      Discover Moxie's premium beauty treatments, meticulously crafted to
+      enhance your natural allure.
+    </p>
+    <p class="text-base mb-4 max-w-[56ch]">
+      Placeholder for content describing the Services. Aenean lacinia bibendum
+      nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum
+      faucibus dolor auctor.
+    </p>
+
+    <div class="flex justify-center flex-col flex-grow w-full max-w-lg my-12">
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">2 Week Classic Lash Fill</label
+        >
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            Day 8-16 Classic Lash Fill
+          </p>
+          <p class="text-sm">$60.00 ・ 1 hr</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2"
+          >3 Week Classic Lash Fill (Extended)</label
+        >
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            Day 17-22 Classic Lash Fill
+          </p>
+          <p class="text-sm">$75.00 ・ 1 hr 15 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Classic Lash Set</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            New Full Set of Classic Style Lashes
+          </p>
+          <p class="text-sm">$165.00 ・ 2 hr</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Hybrid Lash Full Set</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+          </p>
+          <p class="text-sm">$175.00 ・ 2 hr</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">1 Week Hybrid Fill</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            0-7 Days Hybrid Lash Fill
+          </p>
+          <p class="text-sm">$50.00 ・ 1 hr</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">2 Week Hybrid Lash Fill</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+          </p>
+          <p class="text-sm">$62.00 ・ 1 hr</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Mens Back Wax</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+          </p>
+          <p class="text-sm">$55.00 ・ 45 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Eyebrow Wax (women's)</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            Eyebrow wax, trim, and shape
+          </p>
+          <p class="text-sm">$20.00 ・ 30 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2"
+          >Eyebrow Wax (youth 14-17 Parent must accompany)</label
+        >
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            Youth eyebrow wax - parent must be present Wax, trim, shape
+          </p>
+          <p class="text-sm">$18.00 ・ 30 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Chin Wax</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            Hair must be length of grain of rice
+          </p>
+          <p class="text-sm">$14.00 ・ 15 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Lash Lift &amp; Tint</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+          </p>
+          <p class="text-sm">$89.00 ・ 1 hr 30 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Brow Lamination + Tint</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            Brow lamination, tint, and wax/shape
+          </p>
+          <p class="text-sm">$99.00 ・ 1 hr</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2"
+          >Microblading Consultation</label
+        >
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            In this appointment, we will talk about the microblading process,
+            preparation, service, and healing. You will get a rough draft "brow
+            map" and see what your semi-permenant, low-maintenance brow shape
+            will be.
+          </p>
+          <p class="text-sm">Free ・ 1 hr 10 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Eyebrow Microblade</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            This semi-permanent eyebrow shape will make getting ready so much
+            easier! Your brows will be customized to your face shape, brow
+            bones, and features.
+          </p>
+          <p class="text-sm">$350.00 ・ 2 hr 30 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Lash Removal</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            Removal of current lash extensions
+          </p>
+          <p class="text-sm">$30.00 ・ 40 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2"
+          >Microblade 6 week touch up</label
+        >
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            Touch up from initial microblade appointment at Moxie Beauty Studio
+          </p>
+          <p class="text-sm">$50.00 ・ 1 hr 15 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">Full Set Volume</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+          </p>
+          <p class="text-sm">$185.00 ・ 30 min</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">1 Week Volume Fill</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            0-7 Days
+          </p>
+          <p class="text-sm">$55.00 ・ 1 hr</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2">2 Week Volume Fill</label>
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            8-16 Day Fill
+          </p>
+          <p class="text-sm">$65.00 ・ 1 hr</p>
+        </div>
+      </div>
+
+      <div
+        class="service-block rounded-tl rounded-tr-[1rem] rounded-br rounded-bl-[1rem] p-3 mb-2 border border-transparent hover:border-rose-gold-500 dark:hover:border-ivory-rose-500 transition-all"
+      >
+        <label class="text-lg inline-block mb-2"
+          >3 Week Volume Fill (Extended)</label
+        >
+        <div>
+          <p
+            class="text-ellipsis italic overflow-hidden line-clamp-3 text-sm text-balance mb-2"
+          >
+            17-22 Days
+          </p>
+          <p class="text-sm">$85.00 ・ 1 hr 15 min</p>
+        </div>
+      </div>
+    </div>
+
+    <Image
+      src={placeholder}
+      alt="Close up of a woman receiving lash treatment."
+      class="h-96 w-full max-w-[40rem] mb-8 mr-8 md:mr-8 lg:mr-10 rounded-tl rounded-tr-[4rem] rounded-br rounded-bl-[4rem] border-r-[.5rem] border-b-[.5rem] border-rose-gold-500 dark:border-ivory-rose-500 object-cover z-0"
+      loading="lazy"
+      format="avif"
+    />
+    <p class="text-base mb-12 max-w-[56ch]">
+      All Services are by appointment only. Moxie has a strict 24-hour
+      cancellation policy. Please take the time to read our
+      <a href="#0" class="underline hover:no-underline font-bold">
+        Appointment Policies
+      </a>
+      before your appointment, thank you.
+    </p>
+  </div>
+</div>
