@@ -62,7 +62,7 @@ const images: Image[] = [
   }
 </div>
 
-<div id="modal" class="modal-window">
+<div id="modalGallery" class="modal-window">
   <div class="modal-container relative">
     <img
       id="modalImage"
@@ -82,29 +82,6 @@ const images: Image[] = [
 </div>
 
 <style>
-  #modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.75);
-    opacity: 0;
-    visibility: hidden;
-    transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease;
-    z-index: 1000;
-  }
-
-  #modal.open {
-    opacity: 1;
-    visibility: visible;
-  }
-
   #modalImage {
     max-width: 90vw;
     max-height: 90vh;
@@ -116,14 +93,14 @@ const images: Image[] = [
   document.querySelectorAll("img[data-src]").forEach((img) => {
     img.addEventListener("click", () => {
       openModal(img.getAttribute("data-src"), img.getAttribute("data-alt"));
-      document.body.style.overflow = "hidden"; // Disable scrolling
+      document.body.style.overflow = "hidden";
     });
   });
 
   document.getElementById("closeButton").addEventListener("click", closeModal);
 
   function openModal(src, alt) {
-    const modal = document.getElementById("modal");
+    const modal = document.getElementById("modalGallery");
     const modalImage = document.getElementById("modalImage");
     modalImage.src = src || "";
     modalImage.alt = alt || "";
@@ -131,8 +108,8 @@ const images: Image[] = [
   }
 
   function closeModal() {
-    const modal = document.getElementById("modal");
+    const modal = document.getElementById("modalGallery");
     modal.classList.remove("open");
-    document.body.style.overflow = ""; // Enable scrolling
+    document.body.style.overflow = "";
   }
 </script>

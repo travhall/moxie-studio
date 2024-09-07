@@ -1,0 +1,45 @@
+---
+
+---
+
+<div id="modal" class="modal-window">
+  <div class="modal-container relative">
+    Modal Content
+    <button
+      class="absolute flex place-content-center top-2 right-2 border-2 border-monstera-500 bg-ivory-rose-50/85 outline-0 ring-offset-2 ring-offset-ivory-rose-50 focus-visible:ring focus-visible:ring-monstera-500 backdrop-blur h-8 w-8 rounded-full modal-close"
+    >
+      <span class="leading-none text-monstera-500 text-2xl -mt-[2px]"
+        >&times;</span
+      >
+    </button>
+  </div>
+</div>
+
+<script type="module">
+  let modalOpen = document.querySelectorAll(".modal-trigger");
+  let modalClose = document.querySelectorAll(".modal-close");
+
+  modalOpen.forEach((el) =>
+    el.addEventListener("click", (event) => {
+      console.log(event.target.getAttribute("data-modal"));
+      openModal();
+    })
+  );
+  modalClose.forEach((el) =>
+    el.addEventListener("click", (event) => {
+      closeModal();
+    })
+  );
+
+  function openModal(e) {
+    const modal = document.getElementById("modal");
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden"; // Disable scrolling
+  }
+
+  function closeModal(e) {
+    const modal = document.getElementById("modal");
+    modal.classList.remove("open");
+    document.body.style.overflow = ""; // Enable scrolling
+  }
+</script>

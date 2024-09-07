@@ -2,7 +2,7 @@
 import { SEO } from "astro-seo";
 import SiteNav from "../components/SiteNav.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import { Icon } from "astro-icon/components";
+import Modal from "../components/Modal.astro";
 
 interface Props {
   title: string;
@@ -19,9 +19,8 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/moxie-studio/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
 
-    <SEO title="" description="" />
+    <SEO title={title} description="" />
   </head>
   <body
     class="relative bg-ivory-rose-50 dark:bg-monstera-900 text-midnite-900 dark:text-white w-full overflow-x-hidden"
@@ -30,6 +29,7 @@ const { title } = Astro.props;
     <SiteNav />
     <slot />
     <SiteFooter />
+    <Modal />
     <style is:global>
       @font-face {
         font-family: "Mulish";
@@ -92,6 +92,29 @@ const { title } = Astro.props;
       }
       .logo-hilite {
         fill: #d9b77b;
+      }
+
+      .modal-window {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.75);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease;
+        z-index: 1000;
+      }
+
+      .modal-window.open {
+        opacity: 1;
+        visibility: visible;
       }
       @media (prefers-color-scheme: dark) {
         button path {

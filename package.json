@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.2",
+    "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.0",
     "@types/tailwindcss": "^3.1.0",
-    "astro": "^4.13.2",
+    "astro": "^4.15.4",
     "astro-color-scheme": "^1.1.5",
     "astro-devtoolbar-tailwind": "^0.0.8",
     "astro-icon": "^1.1.0",
