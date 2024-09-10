@@ -9,8 +9,6 @@ import netlify from "@astrojs/netlify";
 // https://astro.build/config
 export default defineConfig({
   integrations: [devtoolbarTailwind(), icon(), tailwind(), lighthouse()],
-  site: "https://travhall.github.io",
-  base: "moxie-studio",
   output: "server",
   adapter: netlify(),
 });
