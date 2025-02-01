@@ -12,10 +12,13 @@ const { type = "button", size = "md", classes, ...rest } = Astro.props;
 
 <button
   class:list={[
-    "font-display-bold flex flex-row gap-1 items-baseline justify-center text-nowrap text-white dark:text-midnite-900 bg-monstera-500 dark:bg-ivory-rose-500 rounded rounded-tr-2xl rounded-bl-2xl hover:rounded hover:rounded-tl-2xl hover:rounded-br-2xl outline-0 ring-offset-2 ring-offset-ivory-rose-50 dark:ring-offset-monstera-500 focus-visible:ring focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500 transition-all ease-in-out duration-300",
-    size === "sm" && "text-xs py-2 px-3",
-    size === "md" && "text-base py-3 px-4",
-    size === "lg" && "text-xl py-4 px-5",
+    "font-display-bold flex flex-row gap-1 items-baseline justify-center text-nowrap text-background bg-monstera dark:bg-ivory-rose outline-0 ring-offset-2 ring-offset-background focus-visible:ring focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500 transition-all ease-in-out duration-300",
+    size === "sm" &&
+      "text-xs py-2 px-3 rounded rounded-tr-lg rounded-bl-lg hover:rounded hover:rounded-tl-lg hover:rounded-br-lg",
+    size === "md" &&
+      "text-base py-3 px-4 rounded rounded-tr-xl rounded-bl-xl hover:rounded hover:rounded-tl-xl hover:rounded-br-xl",
+    size === "lg" &&
+      "text-xl py-4 px-5 rounded rounded-tr-2xl rounded-bl-2xl hover:rounded hover:rounded-tl-2xl hover:rounded-br-2xl",
     classes,
   ]}
   {type}

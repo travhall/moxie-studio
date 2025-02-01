@@ -5,30 +5,17 @@ import Gallery from "../components/Gallery.astro";
 import Services from "../components/Services.astro";
 import About from "../components/About.astro";
 import Testimonials from "../components/Testimonials.astro";
+import BookingCTA from "../components/BookingCTA.astro";
 ---
 
 <Layout title="Welcome to Moxie Beauty Studio">
   <Hero />
 
-  <main class="w-full min-h-dvh">
-    <section
-      class="relative grid place-content-center p-4 md:py-36 w-full"
-      id="services"
-    >
-      <Services />
-    </section>
-    <section
-      class="relative grid place-content-center p-4 md:py-36 w-full"
-      id="portfolio"
-    >
-      <Gallery />
-    </section>
-    <section
-      class="relative grid place-content-center p-4 md:py-36 w-full"
-      id="about"
-    >
-      <About />
-    </section>
+  <main class="w-full overflow-x-hidden">
+    <Services />
+    <BookingCTA />
+    <!-- <Gallery /> -->
+    <About />
     <Testimonials />
   </main>
 </Layout>

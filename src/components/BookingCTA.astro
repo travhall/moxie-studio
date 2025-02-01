@@ -1,0 +1,37 @@
+---
+import Button from "./Button.astro";
+---
+
+<section
+  class="relative grid place-content-center p-4 md:py-[10vh] w-full min-h-screen"
+  id="booking"
+>
+  <div
+    class="content relative max-w-[65ch] sm:left-[10vw] md:left-28 xl:left-56 2xl:left-[20vw] p-8 lg:px-2 md:mt-[20vh] lg:mt-0"
+    data-gsap-hero-content
+  >
+    <h1
+      class="font-display bg-text-gradient bg-clip-text text-transparent text-3xl lg:text-4xl mb-8 text-balance"
+      data-gsap-hero-title
+    >
+      Book Your Appointment
+    </h1>
+    <p class="text-base text-foreground text-balance mb-4" data-gsap-hero-text>
+      Moxie Beauty Studio is more than just a place for beauty treatments; it's
+      a welcoming space where clients can embark on their self-care journey with
+      the support and expertise needed to achieve their best selves.
+    </p>
+    <p class="text-base mb-12 text-balance" data-gsap-hero-text>
+      All Services are by appointment only. Moxie has a <span
+        class="font-bold italic">strict 24-hour cancellation policy</span
+      >. Please take the time to read our
+      <a href="#0" class="underline hover:no-underline font-bold">
+        Appointment Policies
+      </a>
+      before your appointment, thank you.
+    </p>
+    <Button classes="booking-btn" data-modal="booking" data-gsap-hero-button
+      >Make an Appointment</Button
+    >
+  </div>
+</section>

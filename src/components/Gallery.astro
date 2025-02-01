@@ -37,49 +37,55 @@ const images: Image[] = [
 ];
 ---
 
-<div
-  class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-1 z-10"
+<section
+  class="relative grid place-content-center p-4 md:py-[10vh] w-full min-h-screen"
+  id="portfolio"
 >
-  {
-    images.map((image, index) => (
-      <div
-        data-index={index}
-        class={`col-span-${image.cols || "auto"} row-span-${image.rows || "auto"}`}
-      >
-        <Image
-          src={image.src}
-          alt={image.alt}
-          class="h-full w-full rounded-lg object-cover cursor-pointer"
-          loading="lazy"
-          data-src={image.src}
-          data-alt={image.alt}
-          height="100"
-          width="100"
-          format="avif"
-        />
-      </div>
-    ))
-  }
-</div>
-
-<div id="modalGallery" class="modal-window">
-  <div class="modal-container relative">
-    <img
-      id="modalImage"
-      src=""
-      alt=""
-      class="max-h-full max-w-full rounded-lg"
-    />
-    <button
-      id="closeButton"
-      class="absolute flex place-content-center top-2 right-2 border-2 border-monstera-500 bg-ivory-rose-50/85 outline-0 ring-offset-2 ring-offset-ivory-rose-50 focus-visible:ring focus-visible:ring-monstera-500 backdrop-blur h-8 w-8 rounded-full"
-    >
-      <span class="leading-none text-monstera-500 text-2xl -mt-[2px]"
-        >&times;</span
-      >
-    </button>
+  <div
+    class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-1 z-10"
+    data-animate="gallery"
+  >
+    {
+      images.map((image, index) => (
+        <div
+          data-index={index}
+          class={`col-span-${image.cols || "auto"} row-span-${image.rows || "auto"}`}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            class="h-full w-full rounded-lg object-cover cursor-pointer"
+            loading="lazy"
+            data-src={image.src}
+            data-alt={image.alt}
+            height="100"
+            width="100"
+            format="avif"
+          />
+        </div>
+      ))
+    }
   </div>
-</div>
+
+  <div id="modalGallery" class="modal-window">
+    <div class="modal-container relative">
+      <img
+        id="modalImage"
+        src=""
+        alt=""
+        class="max-h-full max-w-full rounded-lg"
+      />
+      <button
+        id="closeButton"
+        class="absolute flex place-content-center top-2 right-2 border-2 border-foreground bg-foreground/85 outline-0 ring-offset-2 ring-offset-background focus-visible:ring focus-visible:ring-monstera-500 backdrop-blur h-8 w-8 rounded-full"
+      >
+        <span class="leading-none text-background text-2xl -mt-[2px]"
+          >&times;</span
+        >
+      </button>
+    </div>
+  </div>
+</section>
 
 <style>
   #modalImage {
@@ -112,4 +118,9 @@ const images: Image[] = [
     modal.classList.remove("open");
     document.body.style.overflow = "";
   }
+</script>
+
+<script>
+  import { initSectionAnimations } from "../scripts/sectionAnimations";
+  initSectionAnimations();
 </script>

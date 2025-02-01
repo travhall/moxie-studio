@@ -1,0 +1,193 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/globals.css";
+
+// Define color variations
+const colorSections = [
+  {
+    name: "ivory-rose",
+    title: "Ivory Rose",
+    shades: [
+      { value: 50, class: "bg-ivory-rose-50" },
+      { value: 100, class: "bg-ivory-rose-100" },
+      { value: 200, class: "bg-ivory-rose-200" },
+      { value: 300, class: "bg-ivory-rose-300" },
+      { value: 400, class: "bg-ivory-rose-400" },
+      { value: 500, class: "bg-ivory-rose-500" },
+      { value: 600, class: "bg-ivory-rose-600" },
+      { value: 700, class: "bg-ivory-rose-700" },
+      { value: 800, class: "bg-ivory-rose-800" },
+      { value: 900, class: "bg-ivory-rose-900" },
+    ],
+  },
+  {
+    name: "monstera",
+    title: "Monstera",
+    shades: [
+      { value: 50, class: "bg-monstera-50" },
+      { value: 100, class: "bg-monstera-100" },
+      { value: 200, class: "bg-monstera-200" },
+      { value: 300, class: "bg-monstera-300" },
+      { value: 400, class: "bg-monstera-400" },
+      { value: 500, class: "bg-monstera-500" },
+      { value: 600, class: "bg-monstera-600" },
+      { value: 700, class: "bg-monstera-700" },
+      { value: 800, class: "bg-monstera-800" },
+      { value: 900, class: "bg-monstera-900" },
+    ],
+  },
+  {
+    name: "rose-gold",
+    title: "Rose Gold",
+    shades: [
+      { value: 50, class: "bg-rose-gold-50" },
+      { value: 100, class: "bg-rose-gold-100" },
+      { value: 200, class: "bg-rose-gold-200" },
+      { value: 300, class: "bg-rose-gold-300" },
+      { value: 400, class: "bg-rose-gold-400" },
+      { value: 500, class: "bg-rose-gold-500" },
+      { value: 600, class: "bg-rose-gold-600" },
+      { value: 700, class: "bg-rose-gold-700" },
+      { value: 800, class: "bg-rose-gold-800" },
+      { value: 900, class: "bg-rose-gold-900" },
+    ],
+  },
+  {
+    name: "midnite",
+    title: "Midnite",
+    shades: [
+      { value: 50, class: "bg-midnite-50" },
+      { value: 100, class: "bg-midnite-100" },
+      { value: 200, class: "bg-midnite-200" },
+      { value: 300, class: "bg-midnite-300" },
+      { value: 400, class: "bg-midnite-400" },
+      { value: 500, class: "bg-midnite-500" },
+      { value: 600, class: "bg-midnite-600" },
+      { value: 700, class: "bg-midnite-700" },
+      { value: 800, class: "bg-midnite-800" },
+      { value: 900, class: "bg-midnite-900" },
+    ],
+  },
+];
+---
+
+<Layout title="Style Guide">
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-4xl font-display mb-12">Style Guide</h1>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-display-bold mb-8">Colors</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {
+          colorSections.map((section) => (
+            <div class="space-y-2">
+              <h3 class="text-lg font-display-bold mb-4">{section.title}</h3>
+              <div class="space-y-2">
+                {section.shades.map((shade) => (
+                  <div class="rounded h-12 overflow-hidden">
+                    <div class={`${shade.class} h-12 w-full`} />
+                  </div>
+                    <div class="text-xs mt-1 pb-2">{section.title} {shade.value}</div>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mb-16 text-foreground">
+      <h2 class="text-2xl font-display-bold mb-8">Typography</h2>
+
+      <div class="space-y-12">
+        <div class="space-y-6">
+          <h3 class="text-lg font-display-bold mb-4">Font Families</h3>
+          <div class="space-y-4">
+            <div class="py-4">
+              <p class="font-sans">Sans: Mulish</p>
+              <p class="font-sans">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+            <div class="py-4">
+              <p class="font-display">Display: Nyght Serif</p>
+              <p class="font-display">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+            <div class="py-4">
+              <p class="font-display-italic">
+                Display Italic: Nyght Serif Italic
+              </p>
+              <p class="font-display-italic">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+            <div class="py-4">
+              <p class="font-display-bold">Display Bold: Nyght Serif Dark</p>
+              <p class="font-display-bold">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+            <div class="py-4">
+              <p class="font-display-bold-italic">
+                Display Bold Italic: Nyght Serif Dark Italic
+              </p>
+              <p class="font-display-bold-italic">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <h3 class="text-lg font-display-bold mb-4">Font Sizes</h3>
+          <div class="space-y-4">
+            <div class="py-4">
+              <p class="text-xs">Extra Small: 0.75rem / 1.125rem</p>
+              <p class="text-xs">The quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div class="py-4">
+              <p class="text-base">Base: 0.9375rem / 1.3125rem</p>
+              <p class="text-base">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+            <div class="py-4">
+              <p class="text-lg">Large: 1.1875rem / 1.425rem</p>
+              <p class="text-lg">The quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div class="py-4">
+              <p class="text-xl">Extra Large: 1.4375rem / 1.725rem</p>
+              <p class="text-xl">The quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div class="py-4">
+              <p class="text-2xl">2XL: 1.8125rem / 2.175rem</p>
+              <p class="text-2xl">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+            <div class="py-4">
+              <p class="text-3xl">3XL: 2.3125rem / 2.775rem</p>
+              <p class="text-3xl">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+            <div class="py-4">
+              <p class="text-4xl">4XL: 2.875rem / 3.45rem</p>
+              <p class="text-4xl">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+            <div class="py-4">
+              <p class="text-5xl">5XL: 3.5625rem / 4.275rem</p>
+              <p class="text-5xl">
+                The quick brown fox jumps over the lazy dog
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
