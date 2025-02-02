@@ -3,26 +3,53 @@ import type { HTMLAttributes } from "astro/types";
 
 interface Props extends HTMLAttributes<"button"> {
   type?: "button" | "submit";
+  variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   classes?: string;
 }
 
-const { type = "button", size = "md", classes, ...rest } = Astro.props;
+const {
+  type = "button",
+  variant = "primary",
+  size = "md",
+  classes,
+  ...rest
+} = Astro.props;
+
+// Common classes for all variants
+const baseClasses =
+  "font-display-bold flex flex-row gap-1 items-baseline justify-center text-nowrap outline-0 ring-offset-2 ring-offset-background focus-visible:ring transition-all ease-in-out duration-300";
+
+// Size variants
+const sizeClasses = {
+  sm: "text-xs py-2 px-3 rounded rounded-tr-lg rounded-bl-lg hover:rounded hover:rounded-tl-lg hover:rounded-br-lg",
+  md: "text-base py-3 px-4 rounded rounded-tr-xl rounded-bl-xl hover:rounded hover:rounded-tl-xl hover:rounded-br-xl",
+  lg: "text-xl py-4 px-5 rounded rounded-tr-2xl rounded-bl-2xl hover:rounded hover:rounded-tl-2xl hover:rounded-br-2xl",
+};
+
+// Variant-specific classes
+const variantClasses = {
+  primary:
+    "bg-monstera dark:bg-rose-gold text-background focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500",
+  secondary:
+    "bg-rose-gold dark:bg-ivory-rose text-background focus-visible:ring-rose-gold-500",
+  outline:
+    "bg-transparent border-2 border-monstera dark:border-ivory-rose text-monstera dark:text-ivory-rose hover:bg-monstera/10 dark:hover:bg-ivory-rose/10 focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500",
+  ghost:
+    "bg-transparent text-monstera dark:text-ivory-rose hover:underline hover:bg-monstera/5 dark:hover:bg-ivory-rose/5 focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500",
+};
 ---
 
 <button
   class:list={[
-    "font-display-bold flex flex-row gap-1 items-baseline justify-center text-nowrap text-background bg-monstera dark:bg-ivory-rose outline-0 ring-offset-2 ring-offset-background focus-visible:ring focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500 transition-all ease-in-out duration-300",
-    size === "sm" &&
-      "text-xs py-2 px-3 rounded rounded-tr-lg rounded-bl-lg hover:rounded hover:rounded-tl-lg hover:rounded-br-lg",
-    size === "md" &&
-      "text-base py-3 px-4 rounded rounded-tr-xl rounded-bl-xl hover:rounded hover:rounded-tl-xl hover:rounded-br-xl",
-    size === "lg" &&
-      "text-xl py-4 px-5 rounded rounded-tr-2xl rounded-bl-2xl hover:rounded hover:rounded-tl-2xl hover:rounded-br-2xl",
+    baseClasses,
+    sizeClasses[size],
+    variantClasses[variant],
     classes,
   ]}
   {type}
   data-size={size}
+  data-variant={variant}
   {...rest}
 >
   <slot />

@@ -1,10 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import heroImg from "../assets/hero-img.jpg";
+import Button from "./Button.astro";
 ---
 
 <section
-  class="hero grid relative w-full min-h-screen lg:min-h-[70vh] place-items-center lg:place-items-start mb-12"
+  class="hero grid relative w-full min-h-screen lg:min-h-[70vh] place-items-center lg:place-items-start"
   id="hero"
   data-gsap-hero
 >
@@ -21,38 +22,48 @@ import heroImg from "../assets/hero-img.jpg";
         >Moxie Beauty Studio</span
       >
     </h1>
-    <p class="text-base text-balance mb-4" data-gsap-hero-text>
+    <p class="text-base text-balance mb-6" data-gsap-hero-text>
       Welcome to Moxie, where beauty meets expertise. Our studio specializes in
       stunning lashes and sculpted brows, offering personalized treatments that
       leave you confident and radiant. Discover the power of Moxie and unleash
       your inner glow today.
     </p>
     <ul
-      class="my-6 lg:flex lg:flex-row"
+      class="flex flex-col md:flex-row gap-8 mb-4"
       id="contact-hero"
       data-gsap-hero-contact
     >
-      <li class="mb-4 lg:mb-0 lg:py-5 pe-6 text-base">
-        <span class="font-display-bold mr-1 text-monstera dark:text-ivory-rose"
+      <li class="mb-6">
+        <Button
+          classes="w-full md:w-[auto] booking-btn"
+          data-modal="booking"
+          data-gsap-hero-button>Make an Appointment</Button
+        >
+      </li>
+      <li class="mb-4 text-base flex lg:flex-col">
+        <span class="font-display-bold mr-1 text-monstera dark:text-rose-gold"
           >Phone</span
         >
         <a
           href="tel:2623326072"
-          class="font-semibold no-underline lg:hover:underline underline-offset-2 decoration-2 decoration-monstera dark:decoration-ivory-rose transition-all"
+          class="font-semibold no-underline text-nowrap lg:hover:underline underline-offset-2 decoration-2 decoration-monstera dark:decoration-ivory-rose transition-all"
           >(262) 332-6072</a
         >
       </li>
-      <li class="mb-4 lg:mb-0 lg:py-5 pe-6 text-base">
-        <span class="font-display-bold mr-1 text-monstera dark:text-ivory-rose"
+      <li class="mb-4 text-base flex lg:flex-col">
+        <span class="font-display-bold mr-1 text-monstera dark:text-rose-gold"
           >Email</span
         >
         <a
           href="mailto:hello@moxiebeautystudiowi.com"
-          class="font-semibold no-underline lg:hover:underline underline-offset-2 decoration-2 decoration-monstera dark:decoration-ivory-rose transition-all"
+          class="font-semibold no-underline text-nowrap lg:hover:underline underline-offset-2 decoration-2 decoration-monstera dark:decoration-ivory-rose transition-all"
           >hello@moxiebeautystudiowi.com</a
         >
       </li>
     </ul>
+    <!-- <Button classes="booking-btn" data-modal="booking" data-gsap-hero-button
+      >Make an Appointment</Button
+    > -->
   </div>
 </section>
 <Image

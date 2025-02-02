@@ -1,8 +1,9 @@
 ---
-import Button from "../components/Button.astro";
+// import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import profileImage from "../assets/jackie-profile.jpg";
 import placeholder from "../assets/placeholder.jpg";
+import Testimonials from "./Testimonials.astro";
 ---
 
 <section
@@ -48,7 +49,7 @@ import placeholder from "../assets/placeholder.jpg";
     </div>
   </div>
 </section>
-
+<Testimonials />
 <script>
   import { initSectionAnimations } from "../scripts/sectionAnimations";
   initSectionAnimations();

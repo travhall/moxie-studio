@@ -79,7 +79,7 @@ const navData: NavItem[] = [
             data-block={i.href}
             data-index={index}
             aria-label={i.title}
-            class="block py-5 md:px-6 text-center font-semibold transition-colors duration-300 nav-link"
+            class="block py-5 md:px-6 text-center font-semibold hover:bg-foreground/5 transition-colors duration-300 nav-link"
           >
             {i.title}
           </a>
@@ -101,15 +101,15 @@ const navData: NavItem[] = [
     height: 65%;
     top: 17.5%;
     left: 0;
-    background: hsl(var(--rose-gold-300) / 0.8);
+    background: hsl(var(--rose-gold-500) / 0.95);
     border-radius: 9999px;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
     will-change: transform, width, opacity;
   }
 
   :global(.dark) .nav-indicator {
-    background: hsl(var(--rose-gold-800) / 0.8);
+    background: hsl(var(--ivory-rose-500) / 0.95);
   }
 
   .nav-link {
@@ -117,13 +117,9 @@ const navData: NavItem[] = [
     z-index: 1;
   }
 
-  /* .nav-link:hover {
+  .nav-link.active {
     color: hsl(var(--background));
-  } */
-
-  /* .nav-link.active {
-    color: hsl(var(--background));
-  } */
+  }
 </style>
 
 <script>
@@ -242,25 +238,16 @@ const navData: NavItem[] = [
     const scrollPosition = window.scrollY + (navHeight + 100);
     const viewportHeight = window.innerHeight;
 
-    // Function to hide indicator with direction option
-    const hideIndicator = (direction?: "right") => {
-      if (indicator) {
-        indicator.style.opacity = "0";
-
-        if (direction === "right") {
-          // Animate to the right
-          const navRect = nav?.getBoundingClientRect();
-          if (navRect) {
-            indicator.style.transform = `translateX(${navRect.width}px)`;
-          }
-        } else {
-          // Just fade out for hero section
+    // Function to hide indicator with transition
+    const hideIndicator = () => {
+      requestAnimationFrame(() => {
+        if (indicator) {
+          indicator.style.opacity = "0";
           indicator.style.width = "0";
         }
-
         // Remove active state from all links
         Array.from(navLinks).forEach((link) => link.classList.remove("active"));
-      }
+      });
     };
 
     // Check for hero visibility
@@ -268,7 +255,7 @@ const navData: NavItem[] = [
       const heroRect = hero.getBoundingClientRect();
       const heroVisible = heroRect.bottom > 0;
       if (heroVisible) {
-        hideIndicator(); // No direction - just fade
+        hideIndicator();
         return;
       }
     }
@@ -277,13 +264,36 @@ const navData: NavItem[] = [
     const lastSection = sections[sections.length - 1];
     if (lastSection) {
       const lastSectionRect = lastSection.getBoundingClientRect();
-      if (lastSectionRect.bottom < viewportHeight / 2) {
-        hideIndicator("right"); // Animate to the right
-        return;
+      // Trigger when last section starts moving out of viewport
+      if (lastSectionRect.bottom <= viewportHeight) {
+        const progress = Math.max(
+          0,
+          Math.min(1, (viewportHeight - lastSectionRect.bottom) / 100)
+        );
+
+        if (progress > 0) {
+          // Smoothly fade out indicator
+          requestAnimationFrame(() => {
+            if (indicator) {
+              indicator.style.opacity = `${1 - progress}`;
+              // Start reducing width as opacity decreases
+              const currentWidth = indicator.offsetWidth;
+              indicator.style.width = `${currentWidth * (1 - progress)}px`;
+            }
+          });
+
+          // Remove active class when mostly faded out
+          if (progress > 0.5) {
+            Array.from(navLinks).forEach((link) =>
+              link.classList.remove("active")
+            );
+          }
+          return;
+        }
       }
     }
 
-    // Only proceed with active section updates if we haven't hidden the indicator
+    // Reset indicator if between hero and last section fade
     indicator.style.opacity = "1";
 
     let closestSection = sections[0];
