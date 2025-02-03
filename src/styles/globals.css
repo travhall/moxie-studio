@@ -142,13 +142,7 @@
   }
 
   .social-icon {
-    /* color: hsl(var(--background)); */
     fill: hsl(var(--background));
-  }
-
-  .toggle-icon {
-    /* color: hsl(var(--foreground)); */
-    fill: hsl(var(--foreground));
   }
 
   .modal-window {

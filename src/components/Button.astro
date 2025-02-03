@@ -22,17 +22,17 @@ const baseClasses =
 
 // Size variants
 const sizeClasses = {
-  sm: "text-xs py-2 px-3 rounded rounded-tr-lg rounded-bl-lg hover:rounded hover:rounded-tl-lg hover:rounded-br-lg",
-  md: "text-base py-3 px-4 rounded rounded-tr-xl rounded-bl-xl hover:rounded hover:rounded-tl-xl hover:rounded-br-xl",
-  lg: "text-xl py-4 px-5 rounded rounded-tr-2xl rounded-bl-2xl hover:rounded hover:rounded-tl-2xl hover:rounded-br-2xl",
+  sm: "text-xs py-2 px-3 rounded-sm rounded-tr-lg rounded-bl-lg hover:rounded-sm hover:rounded-tl-lg hover:rounded-br-lg",
+  md: "text-base py-3 px-4 rounded-sm rounded-tr-xl rounded-bl-xl hover:rounded-sm hover:rounded-tl-xl hover:rounded-br-xl",
+  lg: "text-xl py-4 px-5 rounded-sm rounded-tr-2xl rounded-bl-2xl hover:rounded-sm hover:rounded-tl-2xl hover:rounded-br-2xl",
 };
 
 // Variant-specific classes
 const variantClasses = {
   primary:
-    "bg-monstera dark:bg-rose-gold text-background focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500",
+    "bg-monstera dark:bg-rose-gold hover:bg-monstera/80 hover:dark:bg-rose-gold/80 text-background focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500",
   secondary:
-    "bg-rose-gold dark:bg-ivory-rose text-background focus-visible:ring-rose-gold-500",
+    "bg-rose-gold dark:bg-ivory-rose hover:bg-rose-gold/80 hover:dark:bg-ivory-rose/80 text-background focus-visible:ring-rose-gold-500",
   outline:
     "bg-transparent border-2 border-monstera dark:border-ivory-rose text-monstera dark:text-ivory-rose hover:bg-monstera/10 dark:hover:bg-ivory-rose/10 focus-visible:ring-monstera-500 dark:focus-visible:ring-ivory-rose-500",
   ghost:

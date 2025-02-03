@@ -79,7 +79,7 @@ const navData: NavItem[] = [
             data-block={i.href}
             data-index={index}
             aria-label={i.title}
-            class="block py-5 md:px-6 text-center font-semibold hover:bg-foreground/5 transition-colors duration-300 nav-link"
+            class="block py-5 md:px-6 text-center font-semibold lg:hover:bg-foreground/5 transition-colors duration-300 nav-link"
           >
             {i.title}
           </a>
@@ -175,20 +175,8 @@ const navData: NavItem[] = [
     if (blockId) {
       const element = document.getElementById(blockId);
       if (element) {
-        const nav = document.querySelector("nav");
-        const viewportWidth = window.innerWidth;
-
-        // Adjust offset based on viewport size
-        let offset = 0;
-        if (viewportWidth >= 768) {
-          // md and up
-          offset = nav ? nav.offsetHeight : 0;
-        } else {
-          // For mobile, we want sections to align at the top
-          offset = 0;
-        }
-
-        const elementPosition = element.offsetTop - offset;
+        // Get position without offset for direct top alignment
+        const elementPosition = element.offsetTop;
 
         // Update active state
         document.querySelectorAll(".nav-link").forEach((link) => {
@@ -197,7 +185,6 @@ const navData: NavItem[] = [
 
         requestAnimationFrame(() => {
           updateIndicator(target as HTMLElement);
-
           window.scrollTo({
             top: elementPosition,
             behavior: "smooth",
