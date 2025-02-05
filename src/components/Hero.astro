@@ -30,18 +30,16 @@ import Button from "./Button.astro";
         unleash your inner glow today.
       </p>
       <ul
-        class="flex flex-col md:flex-row gap-8 mb-4"
+        class="flex flex-col-reverse md:flex-row md:gap-8 mb-4"
         id="contact-hero"
         data-gsap-hero-contact
       >
         <li class="mb-6">
-          <Button
-            classes="w-full md:w-[auto] booking-btn"
-            data-modal="booking"
-            data-gsap-hero-button>Make an Appointment</Button
+          <Button classes="w-full md:w-[auto] booking-btn" data-modal="booking"
+            >Make an Appointment</Button
           >
         </li>
-        <li class="mb-4 text-base flex lg:flex-col">
+        <li class="mb-4 text-base flex md:flex-col">
           <span class="font-display-bold mr-1 text-monstera dark:text-rose-gold"
             >Phone</span
           >
@@ -51,7 +49,7 @@ import Button from "./Button.astro";
             >(262) 332-6072</a
           >
         </li>
-        <li class="mb-4 text-base flex lg:flex-col">
+        <li class="mb-4 text-base flex md:flex-col">
           <span class="font-display-bold mr-1 text-monstera dark:text-rose-gold"
             >Email</span
           >

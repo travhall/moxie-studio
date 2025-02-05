@@ -102,19 +102,16 @@
     --rose-gold-900: 35 70% 15%; */
 
     /* Dark theme adjustments for Midnite */
-    /* --midnite-50: 120 15% 80%;
-    --midnite-100: 120 20% 70%;
-    --midnite-200: 120 25% 60%;
-    --midnite-300: 120 30% 50%;
-    --midnite-400: 120 35% 40%;
-    --midnite-500: 120 40% 30%;
-    --midnite-600: 120 45% 25%;
-    --midnite-700: 120 50% 20%;
-    --midnite-800: 120 55% 15%;
-    --midnite-900: 120 60% 10%; */
-
-    /* --text-gradient-start: var(--monstera-50); */
-    /* --text-gradient-end: var(--ivory-rose-700); */
+    --midnite-50: 120 2% 91%;
+    --midnite-100: 120 2% 71%;
+    --midnite-200: 120 3% 58%;
+    --midnite-300: 120 5% 39%;
+    --midnite-400: 120 9% 27%;
+    --midnite-500: 120 33% 8%;
+    --midnite-600: 120 31% 7%;
+    --midnite-700: 120 27% 6%;
+    --midnite-800: 120 25% 5%;
+    --midnite-900: 120 20% 4%;
   }
 }
 
@@ -123,10 +120,6 @@
     min-height: 100dvh;
     max-width: 100vw;
     scroll-behavior: smooth;
-  }
-
-  button path {
-    fill: hsl(var(--foreground));
   }
 
   .logo-fill {

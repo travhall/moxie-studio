@@ -45,6 +45,87 @@ export function initSectionAnimations() {
     );
   });
 
+  // Appointments Section
+  const appointmentsElements = document.querySelectorAll("#appointments");
+  appointmentsElements.forEach((element) => {
+    const content = element.querySelector(".content");
+    const heading = element.querySelector("h1");
+    const paragraphs = element.querySelectorAll("p");
+    const button = element.querySelector(".booking-btn");
+
+    // Set initial states
+    gsap.set([heading, ...paragraphs, button], {
+      opacity: 0,
+      y: 30,
+    });
+
+    ScrollTrigger.create({
+      trigger: element,
+      start: "top 80%",
+      toggleActions: "play reverse play reverse",
+      onEnter: () => {
+        gsap.to(heading, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        });
+        gsap.to(paragraphs, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: "power3.out",
+          delay: 0.2,
+        });
+        gsap.to(button, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power3.out",
+          delay: 0.6,
+        });
+      },
+      onLeave: () => {
+        gsap.to([heading, ...paragraphs, button], {
+          opacity: 0,
+          y: 30,
+          duration: 0.6,
+        });
+      },
+      onEnterBack: () => {
+        gsap.to(heading, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        });
+        gsap.to(paragraphs, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: "power3.out",
+          delay: 0.2,
+        });
+        gsap.to(button, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power3.out",
+          delay: 0.2,
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to([heading, ...paragraphs, button], {
+          opacity: 0,
+          y: 30,
+          duration: 0.6,
+        });
+      },
+    });
+  });
+
   // Gallery Section
   const galleryElements = document.querySelectorAll('[data-animate="gallery"]');
   galleryElements.forEach((element) => {

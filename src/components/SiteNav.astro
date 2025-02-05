@@ -1,5 +1,5 @@
 ---
-import Button from "./Button.astro";
+// import Button from "./Button.astro";
 interface NavItem {
   title: string;
   href: string;
@@ -12,7 +12,7 @@ const navData: NavItem[] = [
   },
   {
     title: "Book Now",
-    href: "booking",
+    href: "appointments",
   },
   // {
   //   title: "Portfolio",
@@ -28,7 +28,7 @@ const navData: NavItem[] = [
 <a
   href="#0"
   aria-label="Back to top"
-  class="logo-container inline-block relative lg:fixed top-[20vh] md:top-4 left-4 z-40 opacity-0"
+  class="logo-container inline-block relative lg:fixed top-[20vh] mb-8 md:top-4 left-4 z-40 opacity-0"
   data-gsap-logo
 >
   <!-- large logo  -->
@@ -66,7 +66,7 @@ const navData: NavItem[] = [
 </a>
 
 <nav
-  class="site-nav fixed lg:sticky flex flex-col sm:flex-row sm:inline-flex items-center lg:mt-[18dvh] md:top-6 bottom-2 md:bottom-auto left-2 md:left-36 lg:left-56 right-2 md:right-[auto] bg-background/65 border-[.5px] border-rose-gold-500/50 dark:border-ivory-rose-500/50 backdrop-blur shadow-inner text-foreground rounded-full z-30 opacity-0"
+  class="site-nav fixed lg:sticky flex flex-col sm:flex-row sm:inline-flex items-center lg:mt-[18dvh] md:top-6 bottom-1 md:bottom-auto left-1 md:left-36 lg:left-56 right-1 md:right-[auto] bg-background/65 border-[.5px] border-rose-gold-500/50 dark:border-ivory-rose-500/50 backdrop-blur shadow-inner text-foreground rounded-full z-30 opacity-0"
   data-gsap-nav
 >
   <div class="nav-indicator"></div>
@@ -79,7 +79,7 @@ const navData: NavItem[] = [
             data-block={i.href}
             data-index={index}
             aria-label={i.title}
-            class="block py-5 md:px-6 text-center font-semibold lg:hover:bg-foreground/5 transition-colors duration-300 nav-link"
+            class="block py-5 md:px-6 text-center text-xs font-semibold lg:hover:bg-foreground/5 transition-colors duration-300 nav-link"
           >
             {i.title}
           </a>
