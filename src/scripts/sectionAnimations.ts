@@ -7,13 +7,6 @@ interface AnimationDefaults {
   ease: string;
 }
 
-declare global {
-  interface Window {
-    gsap: any;
-    ScrollTrigger: any;
-  }
-}
-
 const defaultAnimation: AnimationDefaults = {
   opacity: 0,
   y: 50,
@@ -48,7 +41,6 @@ export function initSectionAnimations() {
   // Appointments Section
   const appointmentsElements = document.querySelectorAll("#appointments");
   appointmentsElements.forEach((element) => {
-    const content = element.querySelector(".content");
     const heading = element.querySelector("h1");
     const paragraphs = element.querySelectorAll("p");
     const button = element.querySelector(".booking-btn");
@@ -56,7 +48,7 @@ export function initSectionAnimations() {
     // Set initial states
     gsap.set([heading, ...paragraphs, button], {
       opacity: 0,
-      y: 30,
+      y: 50,
     });
 
     ScrollTrigger.create({
@@ -74,7 +66,6 @@ export function initSectionAnimations() {
           opacity: 1,
           y: 0,
           duration: 0.6,
-          stagger: 0.2,
           ease: "power3.out",
           delay: 0.2,
         });
@@ -83,13 +74,13 @@ export function initSectionAnimations() {
           y: 0,
           duration: 0.6,
           ease: "power3.out",
-          delay: 0.6,
+          delay: 0.4,
         });
       },
       onLeave: () => {
         gsap.to([heading, ...paragraphs, button], {
           opacity: 0,
-          y: 30,
+          y: 50,
           duration: 0.6,
         });
       },
@@ -104,7 +95,6 @@ export function initSectionAnimations() {
           opacity: 1,
           y: 0,
           duration: 0.6,
-          stagger: 0.2,
           ease: "power3.out",
           delay: 0.2,
         });
@@ -113,13 +103,13 @@ export function initSectionAnimations() {
           y: 0,
           duration: 0.6,
           ease: "power3.out",
-          delay: 0.2,
+          delay: 0.4,
         });
       },
       onLeaveBack: () => {
         gsap.to([heading, ...paragraphs, button], {
           opacity: 0,
-          y: 30,
+          y: 50,
           duration: 0.6,
         });
       },
@@ -130,7 +120,7 @@ export function initSectionAnimations() {
   const galleryElements = document.querySelectorAll('[data-animate="gallery"]');
   galleryElements.forEach((element) => {
     const items = element.children;
-    gsap.set(items, { opacity: 0, y: 30 });
+    gsap.set(items, { opacity: 0, y: 50 });
 
     ScrollTrigger.create({
       trigger: element,
@@ -148,7 +138,7 @@ export function initSectionAnimations() {
       onLeave: () => {
         gsap.to(items, {
           opacity: 0,
-          y: 30,
+          y: 50,
           duration: 0.6,
         });
       },
@@ -164,7 +154,7 @@ export function initSectionAnimations() {
       onLeaveBack: () => {
         gsap.to(items, {
           opacity: 0,
-          y: 30,
+          y: 50,
           duration: 0.6,
         });
       },
@@ -307,6 +297,8 @@ export function initSectionAnimations() {
 }
 
 // Initialize animations
+document.addEventListener("astro:page-load", initSectionAnimations);
+
 if (
   document.readyState === "complete" ||
   document.readyState === "interactive"
@@ -315,6 +307,3 @@ if (
 } else {
   document.addEventListener("DOMContentLoaded", initSectionAnimations);
 }
-
-// Handle Astro view transitions
-document.addEventListener("astro:page-load", initSectionAnimations);
