@@ -122,6 +122,7 @@ export default {
     },
     fontSize: {
       xs: ["0.75rem", "1.125rem"],
+      sm: ["0.825rem", "1.125rem"],
       base: ["0.9375rem", "1.3125rem"],
       lg: ["1.1875rem", "1.525rem"],
       xl: ["1.4375rem", "1.725rem"],

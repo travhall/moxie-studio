@@ -5,7 +5,7 @@ import placeholder from "../assets/placeholder.jpg";
 ---
 
 <section
-  class="relative grid place-content-center p-4 md:py-[10vh] w-full min-h-screen"
+  class="relative grid place-content-center p-4 md:py-[10vh] w-full min-h-screen bg-ivory-rose-100/50 dark:bg-midnite-500/30"
   id="services"
 >
   <div
@@ -20,21 +20,27 @@ import placeholder from "../assets/placeholder.jpg";
       loading="lazy"
       format="avif"
     />
-    <div class="services-content p-4 text-pretty" data-animate="services">
+    <div
+      class="services-content p-4 max-w-2xl text-pretty"
+      data-animate="services"
+    >
       <h2
-        class="font-display bg-text-gradient bg-clip-text text-transparent text-3xl lg:text-4xl mb-8 max-w-[16ch]"
+        class="font-display bg-text-gradient bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl mb-8 text-balance"
       >
         The Magic of Moxie
       </h2>
-      <p class="text-xl mb-4 max-w-[56ch] text-balance">
-        Discover Moxie's premium beauty treatments, meticulously crafted to
-        enhance your natural allure.
+      <p class="text-xl mb-4">
+        Discover Moxie's premium beauty treatments and services, meticulously
+        crafted to enhance your natural allure.
       </p>
-      <p class="text-base mb-12 max-w-[66ch] text-balance">
-        Whether you&rsquo;re preparing for a special occasion or simply treating
-        yourself, we provide personalized care to ensure stunning, long-lasting
-        results. Book your appointment today and experience the perfect blend of
-        artistry and precision.
+      <p class="text-base mb-12">
+        From special occasions to everyday self-care, Moxie is here to help you
+        look and feel your best. Our expert team provides personalized services,
+        including lashes, brows, microblading, and waxing, to ensure flawless,
+        long-lasting results. With a perfect balance of artistry and precision,
+        we&rsquo;re dedicated to making every visit unforgettable. <a href=""
+          >Schedule your appointment</a
+        > today and experience the Moxie magic.
       </p>
 
       <Image
@@ -45,15 +51,6 @@ import placeholder from "../assets/placeholder.jpg";
         data-animate="services"
         format="avif"
       />
-      <!-- <p class="text-base mb-12 text-balance" data-animate="services">
-      All Services are by appointment only. Moxie has a <span
-        class="font-bold italic">strict 24-hour cancellation policy</span
-      >. Please take the time to read our
-      <a href="#0" class="underline hover:no-underline font-bold">
-        Appointment Policies
-      </a>
-      before your appointment, thank you.
-    </p> -->
     </div>
   </div>
 </section>

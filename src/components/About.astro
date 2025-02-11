@@ -2,7 +2,8 @@
 // import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import profileImage from "../assets/jackie-profile.jpg";
-import placeholder from "../assets/placeholder.jpg";
+import placeholder from "../assets/jackie-working.jpg";
+import Button from "./Button.astro";
 import Testimonials from "./Testimonials.astro";
 ---
 
@@ -22,31 +23,43 @@ import Testimonials from "./Testimonials.astro";
     />
     <div class="about-content p-4 text-pretty" data-animate="about-content">
       <h2
-        class="font-display bg-text-gradient bg-clip-text text-transparent text-3xl lg:text-4xl mb-8 max-w-[16ch] text-balance"
+        class="font-display bg-text-gradient bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl mb-8 max-w-[16ch] text-balance"
       >
         Discover the Heart & Soul of Moxie
       </h2>
-      <p class="text-xl mb-4 max-w-[36ch] text-foreground">
+      <p class="text-lg mb-4 max-w-[36ch] text-foreground">
         Moxie Beauty Studio is dedicated to helping clients feel beautiful and
         confident.
       </p>
-      <p class="text-base mb-12 max-w-[56ch] text-foreground">
-        Moxie Beauty Studio is owned and operated by Jackie Schult. Jackie
-        specializes in eyelash extensions, lash lift and tint, eyebrow
-        lamination, microblading, and waxing. Jackie's dedication to continuous
-        improvement drives her to expand both her skills and services, always
-        staying ahead of industry trends to provide the best possible care. She
-        is committed to fostering strong relationships with her clients,
-        ensuring each appointment is a personalized and enjoyable experience.
+      <p class="text-base mb-6 max-w-[68ch] text-balance">
+        Moxie Beauty Studio is owned and operated by <strong
+          >Jackie Schult</strong
+        >. Jackie specializes in <em
+          >eyelash extensions, lash lift and tint, eyebrow lamination,
+          microblading, and waxing</em
+        >. Her dedication to continuous improvement drives her to expand both
+        her skills and services, always staying ahead of industry trends to
+        provide the best possible care.
       </p>
       <Image
         src={placeholder}
-        alt="Interior of Moxie Beauty Studio"
-        class="h-96 w-full max-w-[40rem] mb-8 mr-8 md:mr-8 lg:mr-10 rounded-tl rounded-tr-[4rem] rounded-br rounded-bl-[4rem] border-r-[.5rem] border-b-[.5rem] border-rose-gold-500 dark:border-ivory-rose-500 object-cover z-0"
+        alt="A picture of Jackie working on another satisfied client."
+        class="h-96 w-full max-w-[36rem] mb-8 mr-8 md:mr-8 lg:mr-10 rounded-tl rounded-tr-[4rem] rounded-br rounded-bl-[4rem] border-r-[.5rem] border-b-[.5rem] border-rose-gold-500 dark:border-ivory-rose-500 object-cover object-top z-0"
         loading="lazy"
         format="avif"
       />
     </div>
+  </div>
+  <div class="flex flex-row place-items-center">
+    <blockquote
+      class="text-xl font-display-italic bg-text-gradient bg-clip-text text-transparent ps-2 max-w-[56ch] text-balance"
+    >
+      Jackie is committed to fostering strong relationships with her clients,
+      ensuring each appointment is a personalized &amp; enjoyable experience.
+    </blockquote>
+    <Button variant="outline" classes="justify-self-start align-self-center"
+      >Book Now</Button
+    >
   </div>
 </section>
 <Testimonials />

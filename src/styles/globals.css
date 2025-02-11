@@ -6,54 +6,54 @@
   :root {
     /* Ivory Rose - A soft, warm pink palette */
     --ivory-rose-50: 0 8% 98%;
-    --ivory-rose-100: 0 8% 92%;
-    --ivory-rose-200: 0 12% 84%;
-    --ivory-rose-300: 0 12% 72%;
-    --ivory-rose-400: 0 16% 60%;
-    --ivory-rose-500: 0 16% 48%;
-    --ivory-rose-600: 0 20% 36%;
-    --ivory-rose-700: 0 20% 24%;
-    --ivory-rose-800: 0 24% 16%;
-    --ivory-rose-900: 0 24% 8%;
+    --ivory-rose-100: 0 8% 88%;
+    --ivory-rose-200: 0 16% 72%;
+    --ivory-rose-300: 0 16% 60%;
+    --ivory-rose-400: 0 20% 54%;
+    --ivory-rose-500: 0 20% 48%;
+    --ivory-rose-600: 0 24% 32%;
+    --ivory-rose-700: 0 24% 24%;
+    --ivory-rose-800: 0 28% 16%;
+    --ivory-rose-900: 0 28% 8%;
 
     /* Monstera - A rich green palette */
-    --monstera-50: 135 8% 92%;
-    --monstera-100: 135 5% 75%;
-    --monstera-200: 135 5% 63%;
-    --monstera-300: 135 9% 45%;
-    --monstera-400: 135 14% 35%;
-    --monstera-500: 135 37% 18%;
-    --monstera-600: 135 35% 16%;
-    --monstera-700: 135 31% 13%;
-    --monstera-800: 135 29% 10%;
-    --monstera-900: 135 25% 8%;
+    --monstera-50: 135 8% 98%;
+    --monstera-100: 135 8% 88%;
+    --monstera-200: 135 8% 72%;
+    --monstera-300: 135 8% 60%;
+    --monstera-400: 135 8% 54%;
+    --monstera-500: 135 8% 48%;
+    --monstera-600: 135 16% 32%;
+    --monstera-700: 135 16% 24%;
+    --monstera-800: 135 32% 16%;
+    --monstera-900: 135 32% 8%;
 
     /* Rose Gold - A warm, metallic palette */
-    --rose-gold-50: 35 45% 97%;
-    --rose-gold-100: 35 55% 89%;
-    --rose-gold-200: 35 58% 85%;
-    --rose-gold-300: 35 60% 78%;
-    --rose-gold-400: 35 62% 73%;
-    --rose-gold-500: 35 64% 67%;
-    --rose-gold-600: 35 45% 61%;
-    --rose-gold-700: 35 28% 47%;
-    --rose-gold-800: 35 27% 37%;
-    --rose-gold-900: 35 26% 28%;
+    --rose-gold-50: 35 40% 98%;
+    --rose-gold-100: 35 40% 88%;
+    --rose-gold-200: 35 36% 76%;
+    --rose-gold-300: 35 36% 64%;
+    --rose-gold-400: 35 36% 56%;
+    --rose-gold-500: 35 40% 48%;
+    --rose-gold-600: 35 40% 32%;
+    --rose-gold-700: 35 40% 24%;
+    --rose-gold-800: 35 40% 16%;
+    --rose-gold-900: 35 40% 8%;
 
     /* Midnite - A deep, dark palette */
-    --midnite-50: 345 2% 94%;
-    --midnite-100: 345 2% 72%;
-    --midnite-200: 345 4% 48%;
-    --midnite-300: 345 4% 36%;
-    --midnite-400: 345 8% 24%;
-    --midnite-500: 345 8% 16%;
-    --midnite-600: 345 16% 8%;
-    --midnite-700: 345 32% 6%;
-    --midnite-800: 345 64% 4%;
-    --midnite-900: 345 90% 2%;
+    --midnite-50: 345 2% 98%;
+    --midnite-100: 345 2% 88%;
+    --midnite-200: 345 2% 72%;
+    --midnite-300: 345 2% 60%;
+    --midnite-400: 345 2% 54%;
+    --midnite-500: 345 2% 44%;
+    --midnite-600: 345 2% 28%;
+    --midnite-700: 345 2% 16%;
+    --midnite-800: 345 2% 8%;
+    --midnite-900: 345 2% 2%;
 
     --background: var(--ivory-rose-50);
-    --foreground: 0 0% 3.9%;
+    --foreground: var(--rose-gold-900);
     --border: 0 0% 89.8%;
     --text-gradient-start: var(--foreground);
     --text-gradient-end: var(--rose-gold-500);
@@ -61,77 +61,15 @@
 
   .dark {
     /* Dark theme adjustments for Ivory Rose */
-    --ivory-rose-50: 0 8% 92%;
-    --ivory-rose-100: 0 10% 84%;
-    --ivory-rose-200: 0 12% 72%;
-    --ivory-rose-300: 0 14% 62%;
-    --ivory-rose-400: 0 16% 55%;
-    --ivory-rose-500: 0 18% 48%;
-    --ivory-rose-600: 0 20% 30%;
-    --ivory-rose-700: 0 22% 25%;
-    --ivory-rose-800: 0 24% 20%;
-    --ivory-rose-900: 0 26% 15%;
 
     /* Dark theme adjustments for Monstera */
-    --monstera-50: 135 8% 85%;
-    --monstera-100: 135 10% 75%;
-    --monstera-200: 135 12% 65%;
-    --monstera-300: 135 14% 55%;
-    --monstera-400: 135 16% 45%;
-    --monstera-500: 135 18% 35%;
-    --monstera-600: 135 20% 25%;
-    --monstera-700: 135 22% 20%;
-    --monstera-800: 135 24% 15%;
-    --monstera-900: 135 26% 10%;
 
     /* Dark theme adjustments for Rose Gold */
-    /* --rose-gold-50: 35 25% 85%;
-    --rose-gold-100: 35 30% 75%;
-    --rose-gold-200: 35 35% 65%;
-    --rose-gold-300: 35 40% 55%;
-    --rose-gold-400: 35 45% 45%;
-    --rose-gold-500: 35 50% 35%;
-    --rose-gold-600: 35 55% 30%;
-    --rose-gold-700: 35 60% 25%;
-    --rose-gold-800: 35 65% 20%;
-    --rose-gold-900: 35 70% 15%; */
-
-    /* --rose-gold-50: 35 8% 85%;
-    --rose-gold-100: 35 10% 80%;
-    --rose-gold-200: 35 12% 70%;
-    --rose-gold-300: 35 14% 60%;
-    --rose-gold-400: 35 16% 50%;
-    --rose-gold-500: 35 18% 40%;
-    --rose-gold-600: 35 20% 30%;
-    --rose-gold-700: 35 22% 25%;
-    --rose-gold-800: 35 24% 20%;
-    --rose-gold-900: 35 26% 15%; */
-
-    /* --rose-gold-50: 35 8% 85%;
-    --rose-gold-100: 35 10% 75%;
-    --rose-gold-200: 35 12% 65%;
-    --rose-gold-300: 35 14% 55%;
-    --rose-gold-400: 35 16% 45%;
-    --rose-gold-500: 35 18% 35%;
-    --rose-gold-600: 35 20% 25%;
-    --rose-gold-700: 35 22% 20%;
-    --rose-gold-800: 35 24% 15%;
-    --rose-gold-900: 35 26% 10%; */
 
     /* Dark theme adjustments for Midnite */
-    --midnite-50: 345 0% 94%;
-    --midnite-100: 345 0% 72%;
-    --midnite-200: 345 4% 48%;
-    --midnite-300: 345 4% 36%;
-    --midnite-400: 345 6% 24%;
-    --midnite-500: 345 6% 16%;
-    --midnite-600: 345 8% 8%;
-    --midnite-700: 345 8% 6%;
-    --midnite-800: 345 10% 4%;
-    --midnite-900: 345 10% 2%;
 
     --background: var(--midnite-900);
-    --foreground: 0 0% 98%;
+    --foreground: var(--ivory-rose-50);
     --border: 0 0% 14.9%;
     --text-gradient-start: var(--foreground);
     --text-gradient-end: var(--ivory-rose-500);
